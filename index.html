@@ -24,8 +24,8 @@
 
         <!-- Current Tab -->
         <div class="tab-container">
-            <p class="tab">Your Weather</p>
-            <p class="tab">Search Weather</p>
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
         </div>
 
         <!-- show Weather -->
@@ -43,8 +43,8 @@
             </div>
 
             <!-- search country form -->
-            <form class="form-container">
-                <input placeholder="Search for city ..." />
+            <form class="form-container" data-searchForm>
+                <input placeholder="Search for city ..." data-searchInput />
 
                 <button class="btn">
                     <img src="./Assets/search.png" width="20" height="20" loading="lazy" />
@@ -52,7 +52,7 @@
             </form>
 
             <!-- loading screen container -->
-            <div class="oading-container">
+            <div class="loading-container">
                 <img src="./Assets/loading.gif" width="150" height="150" />
 
                 <p>Loading</p>
@@ -68,7 +68,7 @@
 
                 <!-- weather description -->
                 <p data-weatherDesc></p>
-                
+
                 <!-- weather icon -->
                 <img data-weatherIcon />
 
@@ -78,28 +78,32 @@
                 <div class="parameter-container">
                     <div class="parameter">
                         <img src="./Assets/wind.png" />
-                        <p >windspeed</p>
+                        <p>windspeed</p>
                         <p data-windspeed></p>
                     </div>
 
                     <div class="parameter">
                         <img src="./Assets/humidity.png" />
-                        <p >humidity</p>
+                        <p>humidity</p>
                         <p data-humidity></p>
                     </div>
 
                     <div class="parameter">
                         <img src="./Assets/cloud.png" />
-                        <p >clouds</p>
+                        <p>clouds</p>
                         <p data-cloudiness></p>
                     </div>
                 </div>
 
             </div>
 
-            
+            <!-- handle api fetch error -->
+            <div class="api-error-container">
+                <img src="./Assets/not-found.png" data-notFoundImg />
+                <p data-apiErrorText></p>
+                <button class="btn" data-apiErrorBtn>Retry</button>
+            </div>
         </div>
-
     </div>
     <script src="script.js"></script>
 </body>
