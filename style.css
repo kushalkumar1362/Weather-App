@@ -23,7 +23,6 @@ body {
 }
 
 /* header and Tab styles */
-
 h1 {
   text-align: center;
   text-transform: uppercase;
@@ -48,7 +47,7 @@ h1 {
   padding: 5px 8px;
 }
 
-.tab.currentab {
+.tab.current-tab {
   background-color: rgba(219, 226, 239, 0.5);
   border-radius: 4px;
 }
